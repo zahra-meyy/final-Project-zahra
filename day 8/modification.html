@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- konten -->
+    <div id="myDiv">hello, World!</div>
+    <!-- atribut -->
+    <img id="myImage" src="../image/mati.jpg" alt="gambar awal">
+    <!-- css -->
+    <div id="myDiv" style="width: 100px; height: 100px; background-color: lightblue;">
+        contoh elemen
+    </div>
+
+    <script>
+        // mengubah konten id myDiv
+        let myDiv = document.getElementById('myDiv');
+        myDiv.textContent = 'Hello, JavaScript!';
+
+        // mengubah atribut 'src' dari elemen gambar
+        document.getElementById("myImage").setAttribute("src","../image/hidup.jpg");
+        document.getElementById("myImage").setAttribute("alt","../image/hidup.jpg");
+
+        // mengubah properti css elemen
+        let div = document.getElementById("myDiv");
+        div.style.backgroundColor = "lightgreen";
+        div.style.width = "200px";
+        div.style.height = "200px";
+
+    </script>
+</body>
+</html>

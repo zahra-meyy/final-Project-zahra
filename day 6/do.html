@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta sekolah="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contoh do...while loop</title>
+</head>
+<body>
+    
+    <h1>contoh penggunaan do...while loop</h1>
+
+    <script>
+        let sekolah;
+
+        // menggunakan do...while loop untuk meminta nama pengguna
+        do {
+            sekolah = prompt("masukkan nama sekolah anda (tidak boleh kosong):");
+        } while (!sekolah); // terus minta hingga nama tidak kosong
+
+        // menampilkan nama di elemen <p>
+        document.write("<p>selamat datang, " + sekolah + "!</p>");
+    </script>
+</body>
+</html>

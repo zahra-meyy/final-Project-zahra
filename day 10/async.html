@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>contoh async/awaiiit di javascript</h1>
+    <p>buka konsol browser (F12) untuk melihat hasil dari async/await</p>
+
+    <script>
+        // fungsi yang mensimulasikan operasi asinkron, misalnya mengambil data dari server
+        function ambilData() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("Data berhasil diambil");
+                }, 2000);
+            });
+        }
+
+        // fungsi asinkron yang menggunakan async dan await
+        async function prosesAsync() {
+            console.log("menunggu data...");
+
+            // menungggu hasil dari fungsi ambilData
+            let hasil = await ambilData();
+            
+            // setelah data didapat, tampilkan hasil
+            console.log(hasil);
+        }
+
+        // memenggil fungsi prosesAsync saat halama dimuat
+        window.onload = function() {
+            prosesAsync();
+        }
+    </script>
+</body>
+</html>

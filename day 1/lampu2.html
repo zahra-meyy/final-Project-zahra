@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empat Lampu dengan Background</title>
+    <style>
+        .lampu-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .lampu {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+        }
+        .bg-1 { background-color: #f8d7da; }
+        .bg-2 { background-color: #d1ecf1; }
+        .bg-3 { background-color: #d4edda; }
+        .bg-4 { background-color: #fff3cd; }
+        img {
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="lampu-container">
+    <!-- Lampu 1 -->
+    <div class="lampu bg-1">
+        <p>Lampu 1</p>
+        <p id="countdown1">10</p>
+        <button onclick="nyalakanLampu('myImage1')">Lampu Hidup</button>
+        <img id="myImage1" src="../image/mati.jpg">
+        <button onclick="matikanLampu('myImage1')">Mati Lampu</button>
+    </div>
+
+    <!-- Lampu 2 -->
+    <div class="lampu bg-2">
+        <p>Lampu 2</p>
+        <p id="countdown2">10</p>
+        <button onclick="nyalakanLampu('myImage2')">Lampu Hidup</button>
+        <img id="myImage2" src="../image/mati.jpg">
+        <button onclick="matikanLampu('myImage2')">Mati Lampu</button>
+    </div>
+
+    <!-- Lampu 3 -->
+    <div class="lampu bg-3">
+        <p>Lampu 3</p>
+        <p id="countdown3">10</p>
+        <button onclick="nyalakanLampu('myImage3')">Lampu Hidup</button>
+        <img id="myImage3" src="../image/mati.jpg">
+        <button onclick="matikanLampu('myImage3')">Mati Lampu</button>
+    </div>
+
+    <!-- Lampu 4 -->
+    <div class="lampu bg-4">
+        <p>Lampu 4</p>
+        <p id="countdown4">10</p>
+        <button onclick="nyalakanLampu('myImage4')">Lampu Hidup</button>
+        <img id="myImage4" src="../image/mati.jpg">
+        <button onclick="matikanLampu('myImage4')">Mati Lampu</button>
+    </div>
+</div>
+
+<script>
+    function nyalakanLampu(id) {
+        document.getElementById(id).src = '../image/hidup.jpg';
+    }
+
+    function matikanLampu(id) {
+        document.getElementById(id).src = '../image/mati.jpg';
+    }
+
+    // Hitung mundur untuk setiap lampu
+    function hitungMundur(lampuId, countdownId, timeLeft) {
+        const countdown = setInterval(function() {
+            document.getElementById(countdownId).innerHTML = timeLeft;
+            timeLeft -= 1;
+            if (timeLeft < 0) {
+                clearInterval(countdown);
+                document.getElementById(countdownId).innerHTML = "Waktu habis!";
+                document.getElementById(lampuId).src = '../image/mati.jpg'; // Matikan lampu otomatis
+            }
+        }, 1000);
+    }
+
+    // Mulai hitung mundur untuk setiap lampu
+    hitungMundur('myImage1', 'countdown1', 10);
+    hitungMundur('myImage2', 'countdown2', 10);
+    hitungMundur('myImage3', 'countdown3', 10);
+    hitungMundur('myImage4', 'countdown4', 10);
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

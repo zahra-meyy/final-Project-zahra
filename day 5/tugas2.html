@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>pilih nama bulan berdasarkan nomor</h2>
+       <!-- form input untuk nomor bulan -->
+   <label for="bulan">masukkan nomor bulan (1-12):</label>
+   <input type="number" id="bulan" placeholder="masukkan nomor bulan"/>
+    <button onclick="cekBulan()">cek bulan</button>
+    <!-- tempat menampilkan hasil -->
+    <p id="hasil bulan"></p>
+    <script>
+        // fungsi untuk mengecek bulan berdasarkan  nomor yang dimasukkan
+        function cekBulan() {
+            // mengambil nilai dari input
+            var nomorBulan = parseInt(document.getElementById("bulan").value);
+            var hasil = "";
+
+            // menggunakan struktur switch untuk menentukan bulan
+            switch (nomorBulan) {
+                case 1:
+                    hasil = "bulan januari.";
+                    break;
+                case 2:
+                    hasil = "hari ini adalah februari.";
+                    break;
+                case 3:
+                    hasil = "hari ini adalah maret.";
+                    break;
+                case 4:
+                    hasil = "hari ini adalah april.";
+                    break;
+                case 5:
+                    hasil = "hari ini adalah mei.";
+                    break;
+                case 6:
+                    hasil = "hari ini adalah juni.";
+                    break;
+                case 7:
+                    hasil = "hari ini adalah juli.";
+                    break;
+                case 8:
+                    hasil = "hari ini adalah agustus.";
+                    break;
+                case 9:
+                    hasil = "hari ini adalah sebtember.";
+                    break;
+                case 10:
+                    hasil = "hari ini adalah oktober.";
+                    break;
+                case 11:
+                    hasil = "hari ini adalah november.";
+                    break;
+                case 12:
+                    hasil = "hari ini adalah desember.";
+                    break;
+                default:
+                    hasil = "nomor bulan tidak valid. masukkan angka antara 1 dan 12.";    
+            }
+            // menampilkan hasil di elemen dengan id 'hasilBulan'
+            document.getElementById("hasil bulan").innerHTML = hasil;
+        }
+    </script>
+</body>
+</html>

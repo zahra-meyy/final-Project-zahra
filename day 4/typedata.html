@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>belajar tipe data dasar javascript</h1>
+    <p id="zahra"></p>
+
+    <script>
+        let namalengkap = "faiqah nisa azzahra";
+        console.log("nama lengkap:" + namalengkap);
+
+    
+        let usia = 14;
+        console.log("usia:" + usia);
+
+        let sudahmakan = false;
+        console.log("sudah makan:" + sudahmakan);
+
+        let hobi = ["sholat,makan,jajan,tidur,duduk"];
+        console.log("hobi:" + hobi);
+
+        let identitas = {
+            nama: "faiqah nisa azzahra",
+            tanggallahir: "01 desember 2009",
+            alamat: "pelem, pulutan, nogosari, boyolali",
+            status: "istrinya mark lee"
+
+        };
+        console.log("identitas:" + identitas);
+
+        document.getElementById("zahra").innerHTML =
+            "<b>tipe data:</b><br>" +
+            "nama lengkap (string): " + namalengkap + "<br>" +
+            "usia (number): " + usia + "<br>" +
+            "sudah makan (boolean): " + sudahmakan + "<br>" +
+            "hobi (array): " + hobi + "<br>" +
+            "identitas (object): nama: " + identitas.nama + ", tanggal lahir: " + identitas.tanggallahir + ", alamat: " + identitas.alamat + ", status: " + identitas.status;
+    </script>
+</body>
+</html>

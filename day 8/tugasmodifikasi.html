@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">hello, World! jay is mine</div>
+    <img id="myImage" src="../image/pacarku.jpg" alt="gambar awal">
+    <div id="myDiv" style="width: 100px; height: 100px; background-color: plum;">
+     my boyfriend
+    </div>
+
+    <script>
+         let myDiv = document.getElementById('myDiv');
+         myDiv.textContent = 'Hello, kenalin nama gua jay dan zahra itu pacar gua.zahra is mine wkwkwwkkwkwk!';
+
+        document.getElementById("myImage").setAttribute("src","../image/bububb.jpg");
+        document.getElementById("myImage").setAttribute("alt","../image/bububb.jpg");
+
+        let div = document.getElementById("myDiv");
+        div.style.backgroundColor = "pink";
+        div.style.width = "200px";
+        div.style.height = "100px";
+
+    </script>
+    <form action="./tabel.html">
+        <label for="name">nama depan</label><br>
+        <input type="text" id="name" name="name" placeholder="nama depan . . ."><br><br>
+        <label for="name">nama belakang</label><br>
+        <input type="text" id="name" name="name" placeholder="nama belakang . . ."><br><br>
+        <input type="submit" value="kirim">
+    </form>
+
+</body>
+</html>

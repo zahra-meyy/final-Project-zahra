@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: deeppink;
+}
+form {
+    border: 1px solid #acc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+} 
+/* ju7stify-content digunakan untuk menempatkan komponen dibagian tengah */
+/* display membuat komponen menjadi ke arah yang diinginkan flek=tengah */

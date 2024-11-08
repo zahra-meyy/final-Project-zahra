@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="tampilkanArray()">
+    <h1>hewan</h1>
+    <p id="pertama"></p>
+    <p id="kedua"></p>
+    <p id="hapus"></p>
+    <p id="hapusPertama"></p>
+    <p id="panjang"></p>
+    <p id="semuaHewan"></p>
+    <script>
+        function tampilkanArray() {
+            var hewan = ["anjing", "semut", "kecoa", "kucing", "kadal", "burung", "buaya", "bebek", "badak"];
+
+            document.getElementById("pertama").innerHTML = "hewan pertama: " + hewan[0];
+            document.getElementById("kedua").innerHTML = "hewan kedua: " + hewan[1]
+
+            hewan.push("babi");
+
+            var hewanTerakhir = hewan.pop();
+
+            var hewanPertama = hewan.shift();
+
+            document.getElementById("hapus").innerHTML = "hewan terakhir yang dihapus: " + hewanTerakhir;
+
+            document.getElementById("hapusPertama").innerHTML = "hewan pertama yang dihapus: " + hewanPertama;
+
+            document.getElementById("panjang").innerHTML = "total hewan setelah penghapusan: " + hewan.length;
+            document.getElementById("semuaHewan").innerHTML = "semua hewan: " + hewan.join(", ");
+        }
+    </script>
+</body>
+</html>

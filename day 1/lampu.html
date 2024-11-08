@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+          background-color: #f0f0f0; /* Change to your desired color */
+          background-image: url('../image/background.jpg'); /* Optional background image */
+          background-size: cover; /* Adjusts the background image to cover the entire area */
+          text-align: center; /* Centers the buttons and image */
+          padding: 20px; /* Adds padding around the content */
+      }
+      img {
+          width: 100px; /* Keeps the image size the same */
+      }
+  </style>
+</head>
+<body>
+    <p id="countdown">3</p>
+    <p id="countdown2">3</p>
+    <p id="countdown3">3</p>
+    <p id="countdown4">3</p>
+
+    <button onclick="document.getElementById('myImage').src='../image/hidup.jpg'">Lampu Hidup</button>
+    <img id="myImage" src="../image/mati.jpg" style="width: 100px;">
+     <button onclick="document.getElementById('myImage').src='../image/mati.jpg'">Mati Lampu</button>
+    
+     <button onclick="document.getElementById('myImage').src='../image/hidup.jpg'">Lampu Hidup</button>
+    <img id="myImage" src="../image/mati.jpg" style="width: 100px;">
+     <button onclick="document.getElementById('myImage').src='../image/mati.jpg'">Mati Lampu</button>
+    
+     <button onclick="document.getElementById('myImage').src='../image/hidup.jpg'">Lampu Hidup</button>
+    <img id="myImage" src="../image/mati.jpg" style="width: 100px;">
+     <button onclick="document.getElementById('myImage').src='../image/mati.jpg'">Mati Lampu</button>
+    
+     <button onclick="document.getElementById('myImage').src='../image/hidup.jpg'">Lampu Hidup</button>
+    <img id="myImage" src="../image/mati.jpg" style="width: 100px;">
+     <button onclick="document.getElementById('myImage').src='../image/mati.jpg'">Mati Lampu</button>
+    
+     <button onclick="document.getElementById('myImage').src='../image/hidup.jpg'">Lampu Hidup</button>
+    <img id="myImage" src="../image/mati.jpg" style="width: 100px;">
+     <button onclick="document.getElementById('myImage').src='../image/mati.jpg'">Mati Lampu</button>
+    
+    <script>
+       let timeLeft = 3;
+       const countdown = setInterval(function() {
+         document.getElementById("countdown").innerHTML = timeLeft;
+         timeLeft -= 1;
+    
+         if (timeLeft < 0) {
+           clearInterval(countdown);
+           document.getElementById("countdown").innerHTML = "Waktu habis!";
+           document.getElementById('myImage').src = '../image/mati.jpg';
+         }
+       }, 1000);
+
+       let timeLeft2 = 3;
+       const countdown2 = setInterval(function() {
+         document.getElementById("countdown2").innerHTML = timeLeft;
+         timeLeft -= 1;
+    
+         if (timeLeft < 0) {
+           clearInterval(countdown);
+           document.getElementById("countdown2").innerHTML = "Waktu habis!";
+           document.getElementById('myImage').src = '../image/mati.jpg';
+         }
+       }, 1000);
+
+       let timeLeft3 = 3;
+       const countdown3 = setInterval(function() {
+         document.getElementById("countdown3").innerHTML = timeLeft;
+         timeLeft -= 1;
+    
+         if (timeLeft < 0) {
+           clearInterval(countdown);
+           document.getElementById("countdown3").innerHTML = "Waktu habis!";
+           document.getElementById('myImage').src = '../image/mati.jpg';
+         }
+       }, 1000);
+
+       let timeLeft4 = 3;
+       const countdown4 = setInterval(function() {
+         document.getElementById("countdown4").innerHTML = timeLeft;
+         timeLeft -= 1;
+    
+         if (timeLeft < 0) {
+           clearInterval(countdown);
+           document.getElementById("countdown4").innerHTML = "Waktu habis!";
+           document.getElementById('myImage').src = '../image/mati.jpg';
+         }
+       }, 1000);
+
+       let timeLeft5 = 3;
+       const countdown5 = setInterval(function() {
+         document.getElementById("countdown5").innerHTML = timeLeft;
+         timeLeft -= 1;
+    
+         if (timeLeft < 0) {
+           clearInterval(countdown);
+           document.getElementById("countdown").innerHTML = "Waktu habis!";
+           document.getElementById('myImage').src = '../image/mati.jpg';
+         }
+       }, 1000);
+    </script>
+    
+    
+</body>
+</html>

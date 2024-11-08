@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #lampu {
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            transition: background-color 0.5s;
+        }
+        .hidup {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<div id="lampu"></div>
+<button id="toggle">Hidupkan Lampu</button>
+<div id="timer"></div>
+
+<script>
+    let lampu = document.getElementById("lampu");
+    let button = document.getElementById("toggle");
+    let timerDisplay = document.getElementById("timer");
+    let timer;
+    let waktu = 10; // waktu dalam detik
+
+    button.addEventListener("click", function() {
+        if (lampu.classList.contains("hidup")) {
+            matikanLampu();
+        } else {
+            hidupkanLampu();
+        }
+    });
+
+    function hidupkanLampu() {
+        lampu.classList.add("hidup");
+        button.textContent = "Matikan Lampu";
+        timerDisplay.textContent = `Timer: ${waktu} detik`;
+        
+        timer = setInterval(function() {
+            waktu--;
+            timerDisplay.textContent = `Timer: ${waktu} detik`;
+            if (waktu <= 0) {
+                matikanLampu();
+            }
+        }, 1000);
+    }
+
+    function matikanLampu() {
+        lampu.classList.remove("hidup");
+        button.textContent = "Hidupkan Lampu";
+        clearInterval(timer);
+        timerDisplay.textContent = "";
+        waktu = 10; // reset waktu
+    }
+</script>
+
+</body>
+</html>

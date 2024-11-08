@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contoh array</title>
+</head>
+<body onload="tampilkanArray()">
+    <h1>contoh Array di javascript</h1>
+    <p id="pertama"></p>
+    <p id="kedua"></p>
+    <p id="hapus"></p>
+    <p id="hapus pertama"></p>
+    <p id="panjang"></p>
+    <p id="semuaBuah"></p>
+    <script>
+        function tampilkanArray() {
+            // membuat array sederhana berisi nama nama buah
+            var buah = ["apel","pisang","jeruk","mangga"];
+            // mengakses elemen dari array
+            document.getElementById("pertama").innerHTML = "buah pertama: " + buah[0];
+            document.getElementById("kedua").innerHTML = "buah kedua: " + buah[1]
+            // menambahkan buah baru ke array
+            buah.push("nanas");
+            // menghapus buah terakhir dari array menggunakan pop
+            var buahTerakhir = buah.pop();
+            // menghapus pertama dari array menggunakan pop
+            var buahPertama = buah.shift();
+            // menampilakan hasil setelah menghapus buah terakhir
+            document.getElementById("hapus").innerHTML = "buah terakhir yang dihapus: " + buahTerakhir;
+            // menampilkan hasil setelah buah pertama di hapus
+            document.getElementById("hapus pertama").innerHTML = "buah pertama yang dihapus: " + buahPertama;
+            // menampilkan panjang array dan semua elemennya
+            document.getElementById("panjang").innerHTML = "total buah setelah penghapusan: " + buah.length;
+            document.getElementById("semuaBuah").innerHTML = "semua buah: " + buah.join(", ");
+        }
+    </script>
+</body>
+</html>
